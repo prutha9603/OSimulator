@@ -1,8 +1,3 @@
-flask 
-turtle 
-tkinter
-threading
-math
-time
-matplotlib.pyplot
+Flask
+matplotlib
 pandas
