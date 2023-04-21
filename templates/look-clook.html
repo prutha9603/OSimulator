@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{url_for('static' , filename = 'favicon.png')}}">
+    <title>LOOK/C-LOOK</title>
+    <style>
+        * {
+            /* box-sizing: border-box; */
+            font-family: 'Sono', Montserrat;
+        }
+
+        body {
+            align-items: center;
+            background-image: url("{{url_for ('static' , filename='backk.gif')}}");
+            background-repeat: no-repeat;
+            background-size: 1600px 900px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 900;
+            color: rgb(26, 36, 101);
+        }
+
+        button {
+            align-items: center;
+            margin: 10px;
+            background-color: rgb(26, 36, 101);
+            border: solid rgb(0, 0, 0) 1px;
+            border-radius: 3px;
+            padding: 9px;
+            font-weight: 600;
+            color: #fff;
+            font-size: 16px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            height: 50px;
+            width: 100px;
+            margin-left: 600px;
+        }
+
+        button:hover {
+            background-color: #9ee9fa;
+            color: black;
+        }
+
+        p{
+            text-align: left;
+            font-size: 25px;
+            font-weight: 300;
+            margin-left: 20px;
+            margin-right: 20px;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        LOOK SCHEDULING ALGORITHM:
+    </h1>
+    <p>
+        The LOOK scheduling algorithm is also known as the elevator algorithm because it works in a similar fashion to
+        an elevator. The head of the disk moves from the outermost track to the innermost track and back to the
+        outermost track, servicing requests as it moves. When there are no more requests in one direction, the head
+        changes direction and begins servicing requests in the opposite direction.
+
+    </p>
+    <a href = "{{url_for('look')}}"><button id="look" class="look" name="look">SIMULATE</button></a>
+    <h1>
+        C-LOOK SCHEDULING ALGORITHM:
+    </h1>
+    <p>
+        The C-LOOK scheduling algorithm is an improvement over the LOOK scheduling algorithm. It improves disk
+        performance by reducing the average seek time and the number of head movements. The C-LOOK algorithm works in
+        the same way as the LOOK algorithm, but it only services requests in one direction. When it reaches the
+        innermost track, it jumps to the outermost track and continues servicing requests in the same direction.
+
+    </p>
+    <a href = "{{url_for('clook')}}"><button id="clook" class="clook" name="clook">SIMULATE</button></a>
+</body>
+
+</html>

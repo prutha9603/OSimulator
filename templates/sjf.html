@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>  
+    <title>SJFSimulator</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="{{url_for('static' , filename = 'favicon.png')}}">
+    <link rel="stylesheet" href="{{url_for('static' , filename= 'index.css' ) }}">
+    
+</head>
+  
+<body>
+    <style>
+        body {
+            align-items: center;
+            background-image: url("{{url_for ('static' , filename='picture2.png')}}");
+            background-repeat: repeat;
+            background-size: 100% 100%;
+        }
+    </style>
+    <header class="page-header">
+            <h1>Shortest Job First Simulator</h1>
+    </header>
+    <div class="container-1">
+            <form class="input-form" method="post">
+                <div class="form-group">
+                    <label>Process ID: </label>
+                    <input type="number" id="PID" name="PID" value="" min = 0 pattern="[0-9,]*" onkeydown="return event.key === 'Backspace' || event.key === 'Delete' || event.key === 'Tab' || /[0-9,]/.test(event.key)" >
+                </div>
+                <div class="form-group">
+                    <label>Burst Time: </label>
+                    <input name = "bt"type="number" id="burstTime" value="" min = 0 pattern="[0-9,]*" onkeydown="return event.key === 'Backspace' || event.key === 'Delete' || event.key === 'Tab' || /[0-9,]/.test(event.key)" >
+                </div>
+                <div class="form-group">
+                    <label>Arrival Time: </label>
+                    <input name = "at" type="number" id="arrivalTime" value="" min = 0 pattern="[0-9,]*" onkeydown="return event.key === 'Backspace' || event.key === 'Delete' || event.key === 'Tab' || /[0-9,]/.test(event.key)" >
+                </div>
+                <div class="form-group">
+                    <button class="button" type="submit" value="v1" name = "b1">Enter values</button>
+                </div>
+                <form method= "post" action="gant.html">
+                <div class="form-group">
+                    <button class="button" type="submit" value="v2" name = "b2">Show Gantt Chart</button>
+                </form>      
+                </div>  
+        </form>
+    </div>
+    </div>  
+
+
+    <div class="container">
+        {% if test!=0 %}
+        <table id="inputTable">
+            <h2>Gantt Chart Table</h2>
+            <tr>
+                <th>PID</th>
+                    {% for i in range(0, test) %}
+                        <td>{{gc[i]}}</td>
+                    {% endfor %}
+            </tr>
+            <tr>
+                <th>Completion Time</th>
+                {% for i in range(0, test1) %}
+                        <td>{{ct[i]}}</td>
+                    {%endfor%}
+            </tr>
+            <tr>
+                <th>Turn Around Time</th>
+                {% for i in range(0, test3) %}
+                        <td>{{tat[i]}}</td>
+                    {%endfor%}
+            </tr>
+            <tr>
+                <th>Waiting Time</th>
+                {% for i in range(0, test2) %}
+                        <td>{{wt[i]}}</td>
+                    {%endfor%}
+            </tr>
+        </table>
+        <p>Average Turn Around Time : {{avg_tt}}</p>
+        <p>Average Waiting Time : {{avg_wt}}</p>
+        {%endif%}
+    </div>
+</body>
+</html>

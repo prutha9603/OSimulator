@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="icon" href="{{url_for('static' , filename = 'favicon.png')}}">
+    <link rel="stylesheet" type="text/css"  href="{{url_for('static' , filename = 'home.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href = "#">Team-6</a>
+        <button class="navbar-toggler" type="button" data-toggle = "collapse" data-target = "#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded = "false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars text-light"></i>
+        </button>
+
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class ="navbar-nav ms-auto float-right text-right">
+          
+            <li class="nav-item">
+                <a class="nav-link ml-5" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ml-5" href="#project">Projects</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link ml-5" href="#team">About Us</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link ml-5" href="#contact">Contact Us</a>
+            </li>
+           
+    </div>
+    </nav>
+    </header>
+
+
+    <section id="home">
+    <video controls ="" autoplay ="" muted ="" loop = "">
+        <source src="{{url_for('static' , filename = 'mainn.mp4')}}" type="video/mp4">
+    </video>
+     
+   <div class="container">
+
+    <div class="row pt-5">
+
+     <div class="home-text" col-md-8 col-sm-12 mt-5>
+         <h1>Get your OS Simulations done Right</h1>
+         <p>OSimulator</p>  
+    <ul class="section-btn">
+     <a href="#about"><span data-hover="Explore">Explore</span></a>
+    </ul>
+    </div> 
+    </div>
+   </div>
+<!-- <div class="overlay"></div> -->
+    </section>
+
+<section id="about">
+
+   <div class="container py-5">
+     <div class="row py-5 my-5">
+        <div class="about-text text-center py-5 col-md-10 col-sm-12 mx-auto">
+            <h3 class="pb-3">We're Team_6</h3>
+            <h1>Welcome to our team at the simulator website! We are a group of passionate individuals who 
+            are dedicated to providing a top-notch simulation experience to our users. Our team is composed 
+            of skilled developers, designers, and engineers who work together to create engaging simulations 
+            that are both educational and entertaining.At the heart of our website is our team of dedicated 
+            professionals who have come together to create a seamless and immersive simulator experience for 
+            you.</h1>
+        </div>
+     </div>
+   </div>
+
+</section>
+
+<section id="project" class="pb-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 col-sm-6">
+                <div class="project-item">
+                        <img src="{{url_for('static' , filename = '7.png')}}" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h1>Shortest Job First Algorithm</h1>
+                                <p>
+                                    SJF algorithm, or Shortest Job First algorithm, schedules processes based on their execution time, with the shortest job being executed first.
+                                </p>
+                                <br>
+                                <a href = "{{url_for('sjf')}}"><button>Simulate</button></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+                <div class="project-item">
+                        <img src="{{url_for('static' , filename = '8.png')}}" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h1>Dining Philosopher's Problem</h1>
+                                <p>
+                                    Problem: philosophers seated at a round table with chopsticks can create a deadlock if they try to pick up the chopsticks at the same time, causing starvation.
+                                </p>
+                                <br>
+                                <a href = "{{url_for('dining')}}"><button>Simulate</button></a>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+                <div class="project-item">
+                    
+                        <img src="{{url_for('static' , filename = '9.png')}}" class="img-fluid">
+
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h1>Look/C-look Disk Scheduling Algorithm</h1>
+                                <p>
+                                    The look/c-look algorithm is a disk scheduling algorithm that services requests by scanning the disk in a specific direction and only reverses direction once the end of the disk is reached.
+                                </p>
+                                <br>
+                                <a href = "{{url_for('lookclook')}}"><button>Simulate</button></a>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+                <div class="project-item">
+                    
+                        <img src="{{url_for('static' , filename = '10.png')}}" class="img-fluid">
+
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h1>FIFO Page Replacement Algorithm</h1>
+                                <p>
+                                    FIFO page replacement algorithm replaces the oldest page in the memory first.
+                                </p>
+                                <br>
+                                <a href = "{{url_for('fifo')}}"><button>Simulate</button></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="team" class="h-100">
+
+    <div class="container py-5">
+        <h1 class="text-center">Meet the Team</h1>
+
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+        loop="true">
+        <swiper-slide>
+            <img src="{{url_for('static' , filename = '1.png')}}" class="img-fluid">
+        </swiper-slide>
+
+        <swiper-slide>
+            <img src="{{url_for('static' , filename = '2.png')}}" class="img-fluid">
+        </swiper-slide>
+
+        <swiper-slide>
+            <img src="{{url_for('static' , filename = '3.png')}}" class="img-fluid">
+        </swiper-slide>
+
+        <swiper-slide>
+            <img src="{{url_for('static' , filename = '4.png')}}" class="img-fluid">
+        </swiper-slide>
+
+        <swiper-slide>
+            <img src="{{url_for('static' , filename = '5.png')}}" class="img-fluid">
+        </swiper-slide>
+
+      </swiper-container>
+    </div>
+</section>
+
+
+<section id="contact" class="h-100 py-5">
+    <h1 class="text-center py-5">Chat with Us</h1>
+    
+<div class="col-lg-6 col-md-10 col-11 mx-auto pb-5">
+    <div>
+        <form method="POST">
+            <div class="form-row">
+               
+                            <div class="form-group col-sm-6">
+                                <input type="text" name="name" class="form-control" placeholder="Name">
+                              </div>
+                        
+                            <div class="form-group col-md-6">
+                                <input type="email" name="email" class="form-control" placeholder="Email">
+                            </div>
+                        
+            </div>
+                <div class="form-group">
+                    <textarea type="text" class="form-control" id="msg" placeholder="Message" rows="5" name="msg"></textarea>
+                </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+</section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+    <script>
+        $(window).scroll(function() {
+  if ($(window).scrollTop() >= 50) {
+    $('.navbar').css('background', '#d9d9d9');
+  } else {
+    $('.navbar').css('background', 'transparent');
+  }
+});
+    </script>
+</body>
+</html>

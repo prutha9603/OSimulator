@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOOK SCHEDULING ALGORITHM</title>
+	<link rel="background" href="{{url_for('static' , filename = 'picture2.png')}}">
+	<link rel="stylesheet" href= "{{url_for('static' , filename= 'look.css' ) }}">
+</head>
+<body>
+	<h1>LOOK SCHEDULING ALGORITHM</h1>
+	<div class="container"> 
+        <form method="post" action="/look">
+		
+		<label class="pointer">Current Pointer : </label>
+		<input type="number" min = 1 name = "pointer" placeholder="Enter Current Pointer" pattern="[0-9,]*" onkeydown="return event.key === 'Backspace' || event.key === 'Delete' || event.key === 'Tab' || /[0-9,]/.test(event.key)" required>
+		<br>
+		<label class="values">Data values   :</label>
+		<input type="text"  placeholder="Enter values seperated by space" name="values" id = "value" pattern="[0-9,\s]*" onkeydown="return event.key === 'Backspace' || event.key === 'Delete' || event.key === 'Tab' || /[0-9,\s]/.test(event.key)" required>
+		<br>
+		<button type="submit">Submit</button>
+		</form>
+	</div>
+	<script>
+		const inputField = document.getElementById('value');
+
+	inputField.addEventListener('keypress', function(e) {
+  if (e.keyCode === 32 && this.value.endsWith(' ')) {
+    e.preventDefault();
+  }
+});
+	</script>
+</body>
+</html>
