@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+*
+{
+    margin: 0;
+    padding:0;
+    /* box-sizing: border-box; */
+    font-family: 'Sono', Montserrat;
+}
+body{
+    background-color: #222;
+    /* background-image: url("{{url_for ('static' , filename='picture2.png')}}"); */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center ;
+    /* background-image: url('look.gif'); */
+    background-image: url('picture2.png');
+    background-repeat:repeat;
+    background-size: 100%;
+}
+form{
+    text-align: center;
+    justify-content: center;
+}
+label{
+
+        height:25px;
+        max-width: max-content;
+        color: #222;
+        font-size: 30px;
+        font-weight: 800;
+}
+
+.container{
+    /* background-color: #77bfd7; */
+    background-color: #5c48ce;
+    /* width:max-content; */
+    /* align-items: center; */
+    text-align: center;
+    align-self: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 50px;
+    border-radius: 7px;
+    padding: 70px 0;
+    border: 3px solid rgb(0, 0, 0);
+    text-align: center;
+
+}
+button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    background-color: #d8ce43;
+    margin: 10px;
+    border-radius: 3px;
+    padding: 9px;
+    font-weight: 600;
+    height:50px;
+    width:100px;
+  }
+  /* #p{
+    margin-right: 100px;
+  } */
+  /* button {
+    align-items: center;
+    margin: 10px;
+    background-color: #4c6793;
+    background-color: #d8ce43;
+    border: solid rgb(0, 0, 0) 1px;
+    border-radius: 3px;
+    padding: 9px;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+    height:50px;
+    width:100px;
+} */
+button:hover{
+    background-color: rgb(245, 241, 174);
+}
+   
+  button:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+  
+  @media (min-width: 768px) {
+    button {
+      padding: 0.25em 0.75em;
+    }
+  }
+  input{
+    width: 50%;
+    height: 50px;
+    font-size: 22px;
+    font-weight: 600;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+.values{
+    color:#000000;
+    padding:18px;
+    margin-left: 50px;
+    margin-right: 50px;
+   
+}
+
+.pointer {
+    color:#000000;
+    padding:18px;
+    margin-right: 42px;
+}
+h1{
+    text-align: center;
+    font-weight: 1200;
+    font-style: oblique;
+    /* color: #e384ff; */
+    color: #000000;
+    margin-top: 50px;
+}
+
