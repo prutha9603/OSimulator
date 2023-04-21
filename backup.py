@@ -15,9 +15,9 @@ app = Flask(__name__)
 @app.route("/", methods=['GET','POST'])
 def home():
     if request.method == "POST" : #handling post request
-        return render_template("home.html")
+        return render_template("index.html")
     #Return render_template will give the html page as output that is mentioned in it
-    return render_template("home.html")
+    return render_template("index.html")
 
 @app.route('/sjf', methods =["GET", "POST"])#Routing
 def sjf():
