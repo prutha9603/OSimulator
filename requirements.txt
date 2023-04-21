@@ -1,0 +1,8 @@
+flask 
+turtle 
+tkinter
+threading
+math
+time
+matplotlib.pyplot
+pandas
